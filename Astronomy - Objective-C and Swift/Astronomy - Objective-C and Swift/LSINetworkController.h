@@ -6,14 +6,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "LSILog.h"
+#import "LSIErrors.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^ImageFetcherCompletionHandler)(UIImage *_Nullable artist, NSError *_Nullable error);
+
 @interface LSINetworkController : NSObject
 
+/// - Properties
 @property (nonatomic, nonnull) NSString *baseURL;
 
-
+/// - Methods
+- (void)fetchSolTen:(ImageFetcherCompletionHandler)completionHandler;
 
 @end
 

@@ -17,8 +17,8 @@
 		7BDD3ABC2525719D0092B0C8 /* LSILog.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDD3AB62525719C0092B0C8 /* LSILog.m */; };
 		7BDD3ABD2525719D0092B0C8 /* URL+Secure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDD3AB72525719C0092B0C8 /* URL+Secure.swift */; };
 		7BDD3ABE2525719D0092B0C8 /* LSIFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDD3ABA2525719C0092B0C8 /* LSIFileHelper.m */; };
-		7BDD3AC8252574380092B0C8 /* LSINetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDD3AC7252574380092B0C8 /* LSINetworkController.m */; };
 		7BDD3AD22526B8CC0092B0C8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDD3AD12526B8CC0092B0C8 /* DetailViewController.swift */; };
+		7BDD3ADB2526C1AA0092B0C8 /* LSINetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDD3AD92526C1AA0092B0C8 /* LSINetworkController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,9 +40,9 @@
 		7BDD3AB82525719C0092B0C8 /* LSIErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSIErrors.h; path = "Astronomy - Objective-C and Swift/LSIErrors.h"; sourceTree = SOURCE_ROOT; };
 		7BDD3AB92525719C0092B0C8 /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSIFileHelper.h; path = "Astronomy - Objective-C and Swift/LSIFileHelper.h"; sourceTree = SOURCE_ROOT; };
 		7BDD3ABA2525719C0092B0C8 /* LSIFileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LSIFileHelper.m; path = "Astronomy - Objective-C and Swift/LSIFileHelper.m"; sourceTree = SOURCE_ROOT; };
-		7BDD3AC6252574380092B0C8 /* LSINetworkController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSINetworkController.h; sourceTree = "<group>"; };
-		7BDD3AC7252574380092B0C8 /* LSINetworkController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSINetworkController.m; sourceTree = "<group>"; };
 		7BDD3AD12526B8CC0092B0C8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7BDD3AD92526C1AA0092B0C8 /* LSINetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LSINetworkController.m; path = "Astronomy - Objective-C and Swift/LSINetworkController.m"; sourceTree = SOURCE_ROOT; };
+		7BDD3ADA2526C1AA0092B0C8 /* LSINetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSINetworkController.h; path = "Astronomy - Objective-C and Swift/LSINetworkController.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 			children = (
 				7BDD3AD42526BC7F0092B0C8 /* Lambda stuff */,
 				7BDD3AAB25256DEB0092B0C8 /* Other */,
-				7BDD3AC5252574040092B0C8 /* NetworkController */,
+				7BDD3ADD2526C1C00092B0C8 /* Networking */,
 				7BDD3AAD25256E200092B0C8 /* View Controllers */,
 				7BDD3AAC25256E010092B0C8 /* Storyboards */,
 				7BDD3AA325256D780092B0C8 /* main.m */,
@@ -115,16 +115,6 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
-		7BDD3AC5252574040092B0C8 /* NetworkController */ = {
-			isa = PBXGroup;
-			children = (
-				7BDD3AC6252574380092B0C8 /* LSINetworkController.h */,
-				7BDD3AC7252574380092B0C8 /* LSINetworkController.m */,
-			);
-			name = NetworkController;
-			path = "Model Controllers";
-			sourceTree = "<group>";
-		};
 		7BDD3AD42526BC7F0092B0C8 /* Lambda stuff */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +128,15 @@
 				7BDD3AB72525719C0092B0C8 /* URL+Secure.swift */,
 			);
 			name = "Lambda stuff";
+			sourceTree = "<group>";
+		};
+		7BDD3ADD2526C1C00092B0C8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7BDD3ADA2526C1AA0092B0C8 /* LSINetworkController.h */,
+				7BDD3AD92526C1AA0092B0C8 /* LSINetworkController.m */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,7 +217,7 @@
 				7BDD3AA425256D780092B0C8 /* main.m in Sources */,
 				7BDD3ABD2525719D0092B0C8 /* URL+Secure.swift in Sources */,
 				7BDD3ABB2525719D0092B0C8 /* LSIErrors.m in Sources */,
-				7BDD3AC8252574380092B0C8 /* LSINetworkController.m in Sources */,
+				7BDD3ADB2526C1AA0092B0C8 /* LSINetworkController.m in Sources */,
 				7BDD3A9625256D760092B0C8 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
