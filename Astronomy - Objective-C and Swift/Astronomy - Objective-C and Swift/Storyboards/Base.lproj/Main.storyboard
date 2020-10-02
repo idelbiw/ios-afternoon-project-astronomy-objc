@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LkD-Cr-GO2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mars Photo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DetailViewController" customModule="Astronomy___Objective_C_and_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kKn-Cd-hrB">
+                                <rect key="frame" x="0.0" y="215" width="414" height="283"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="b8H-dT-WHK">
+                                <rect key="frame" x="0.0" y="548" width="414" height="157"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taken by __ on ______, ______________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1E-3A-4Wz">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera: ___________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oos-i2-gQd">
+                                        <rect key="frame" x="0.0" y="63.5" width="414" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7VN-Os-oaV">
+                                        <rect key="frame" x="0.0" y="127" width="414" height="30"/>
+                                        <state key="normal" title="Save to Photo Library"/>
+                                        <connections>
+                                            <action selector="saveButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="skP-4g-GJe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kKn-Cd-hrB" secondAttribute="trailing" id="7RY-Ia-QON"/>
+                            <constraint firstItem="kKn-Cd-hrB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JbM-Ln-HCl"/>
+                            <constraint firstItem="b8H-dT-WHK" firstAttribute="top" secondItem="kKn-Cd-hrB" secondAttribute="bottom" constant="50" id="UVW-jd-alt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b8H-dT-WHK" secondAttribute="trailing" id="Wux-Vv-52T"/>
+                            <constraint firstItem="b8H-dT-WHK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cYu-SS-qmG"/>
+                            <constraint firstItem="kKn-Cd-hrB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d0H-UH-h7e"/>
+                            <constraint firstItem="b8H-dT-WHK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jin-Qf-DVO"/>
+                            <constraint firstItem="kKn-Cd-hrB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="lI1-zb-fZz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b8H-dT-WHK" secondAttribute="bottom" constant="157" id="yWx-WF-iCX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mars Photo" id="uEe-uW-gdJ"/>
+                    <connections>
+                        <outlet property="cameraDetailsLabel" destination="oos-i2-gQd" id="9GP-f8-66n"/>
+                        <outlet property="imageView" destination="kKn-Cd-hrB" id="80E-jl-RyG"/>
+                        <outlet property="photoDetailsLabel" destination="m1E-3A-4Wz" id="pWt-Na-t4I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="684.05797101449275" y="116.51785714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AzB-Fs-bIq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LkD-Cr-GO2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="kDw-3w-Pr4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="scc-1e-QBg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="adY-5D-eCX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-226.08695652173915" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
